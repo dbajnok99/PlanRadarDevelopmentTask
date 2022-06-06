@@ -4,8 +4,6 @@ describe 'tickets' do
   let(:send_due_date_reminder) { true }
   let(:user) do
     create(:user, id: 1,
-                  name: 'name',
-                  mail: 'test@example.com',
                   send_due_date_reminder: send_due_date_reminder,
                   due_date_reminder_interval: 1,
                   due_date_reminder_time: '11:30',
@@ -14,12 +12,8 @@ describe 'tickets' do
 
   let(:ticket) do
     create(:ticket, id: 1,
-                    title: 'title',
-                    description: 'description',
                     assigned_user_id: 1,
-                    due_date: '2022-06-07',
-                    status_id: 1,
-                    progress: 1)
+                    due_date: '2022-06-07')
   end
 
   before do
@@ -45,7 +39,7 @@ describe 'tickets' do
     context 'with user having true for send_due_date_reminder' do
       let(:send_due_date_reminder) { true }
 
-      it 'returns without doing anything' do
+      it 'returns with message "succes"' do
         expect(Ticket.find(1).set_email_reminder).to eq('succes')
       end
     end
