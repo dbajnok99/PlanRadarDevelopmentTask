@@ -47,7 +47,7 @@ class UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.permit(:name, :mail, :send_due_date_reminder, :due_date_reminder_interval,
+    params.permit(:id, :name, :mail, :send_due_date_reminder, :due_date_reminder_interval,
                   :due_date_reminder_time, :time_zone)
   end
 end
