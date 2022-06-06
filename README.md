@@ -5,7 +5,9 @@ This application was created for the Development Task in the interview process a
 >PlanRadar is a SaaS application for construction documentation & defect management. Our customers create
 lots of tickets every day. These tickets are usually created to report a defect and it is assigned to a project
 member to fix it.
+
 >Tickets usually contain fields like (Title, Description, Assignee, Due Date, Status, Progress ...etc.).
+
 >We want to implement a new feature to send due date reminders emails to the users based on their profile
 configuration.
 
