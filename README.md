@@ -37,7 +37,7 @@ To add a user, send a POST request to localhost:3000/users with parameters:
  - title (string)
  - description (string)
  - assigned_user_id (integer)
- - due_date (date)]
+ - due_date (date)
  - status_id (integer)
  - progress (integer)
 
