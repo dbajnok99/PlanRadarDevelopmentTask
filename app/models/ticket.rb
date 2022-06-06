@@ -11,6 +11,6 @@ class Ticket < ApplicationRecord
   def set_email_reminder
     return unless user.send_due_date_reminder
 
-    ReminderMailer.ticket_reminder(id).deliver_later!(wait_until: reminder_date)
+    return 'succes' if ReminderMailer.ticket_reminder(id).deliver_later!(wait_until: reminder_date)
   end
 end

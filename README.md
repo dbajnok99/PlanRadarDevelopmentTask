@@ -42,6 +42,7 @@ To add a user, send a POST request to localhost:3000/users with parameters:
  - progress (integer)
 
 When creating a ticket an ActionMailer::MailDeliveryJob is created to be performed at the desired time.
+I am using an SMTP Mailer, therefore the emails will be sent if all the data was given correctly.
 
 ## Running the test
 
